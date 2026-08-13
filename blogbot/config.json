@@ -1,0 +1,52 @@
+{
+  "site_name": "Eastern Iowa Retaining Wall Pros",
+  "domain": "https://easterniowaretainingwall.com",
+  "trade": "retaining wall, paver, and hardscaping",
+  "service_area": "Cedar Rapids, Iowa City, Dubuque, and across Eastern Iowa",
+  "seasonal_key": "hardscape",
+  "phone": "(319) 320-1833",
+
+  "towns": ["Cedar Rapids", "Iowa City", "Dubuque", "Marion", "Coralville",
+            "North Liberty", "Cedar Falls", "Waterloo", "Hiawatha"],
+
+  "brand_facts": [
+    "Free on-site estimates with a fixed written quote before work begins",
+    "Materials offered: segmental concrete block, poured concrete, brick, natural stone and stone veneer, treated timber, and gabion",
+    "Wall types built: gravity, cantilever, piling, and anchored walls",
+    "Also builds paver patios, flagstone walkways, driveways, and stamped concrete",
+    "Walls are built with gravel backfill, drain pipe, and geogrid — proper drainage is standard, not an upsell",
+    "Eastern Iowa's clay-heavy soils hold water, which makes base prep and drainage critical",
+    "Walls over 4 feet generally require engineering and a permit in Iowa jurisdictions",
+    "Typical residential wall pricing runs $40 to $95 per square foot of wall face",
+    "Most homeowners spend between $4,500 and $18,000 on a complete, properly drained wall"
+  ],
+
+  "layout": "dir",
+  "blog_dir": "Blog",
+  "index_file": "Blog/index.html",
+  "reference_post": "Blog/retaining-wall-cost-iowa/index.html",
+
+  "body_includes_header": false,
+  "hero_lede_re": "(?<=</h1>)\\s*<p>.*?</p>",
+  "breadcrumb_re": "<span>(?:(?!</nav>).)*?</span>",
+  "body_start": "<article class=\"blog-article\">",
+  "body_end": "</article>",
+
+  "faq_block_re": "<details class=\"faq-item\">.*</details>",
+  "faq_item_fmt": "            <details class=\"faq-item\">\n              <summary>{q}</summary>\n              <p>{a}</p>\n            </details>",
+  "faq_schema": true,
+
+  "fmt": {
+    "eyebrow": "<p class=\"eyebrow\">{text}</p>",
+    "meta": "<p style=\"color:#6b7280; font-size:.95rem; margin-bottom:28px;\">Published {text}</p>",
+    "p": "<p>{text}</p>",
+    "h2": "<h2>{text}</h2>",
+    "h3": "<h3>{text}</h3>"
+  },
+
+  "cta_html": "<p style=\"margin-top:32px;\"><a href=\"../../Contact Us/index.html\"><strong>Get a free on-site estimate</strong></a> or call <a href=\"tel:3193201833\">(319) 320-1833</a>.</p>",
+
+  "card_anchor": "<div class=\"blog-grid\"[^>]*>",
+  "card_href_fmt": "{slug}/index.html",
+  "card_html": "\n            <article class=\"blog-card\" style=\"border:1px solid #e5e7eb; border-radius:12px; overflow:hidden; background:#fff; display:flex; flex-direction:column;\">\n              <a href=\"{href}\" style=\"display:block;\">\n                <img src=\"../assets/block_wall_hero.png\" alt=\"{title}\" style=\"width:100%; height:190px; object-fit:cover;\" />\n              </a>\n              <div style=\"padding:20px; display:flex; flex-direction:column; gap:10px;\">\n                <p class=\"eyebrow\" style=\"margin:0;\">{category} &middot; {date}</p>\n                <h2 style=\"font-size:1.25rem; margin:0;\"><a href=\"{href}\">{title}</a></h2>\n                <p style=\"margin:0; color:#4b5563;\">{excerpt}</p>\n                <a href=\"{href}\" style=\"margin-top:auto; font-weight:600;\">Read more &rsaquo;</a>\n              </div>\n            </article>"
+}
