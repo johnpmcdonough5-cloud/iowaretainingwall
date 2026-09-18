@@ -14,7 +14,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Our Team | Eastern Iowa Retaining Wall</title>
     <meta name="description" content="The builders and project leads behind Eastern Iowa Retaining Wall, serving Cedar Rapids, Iowa City, Dubuque and beyond." />
-    <meta name="robots" content="noindex, follow" />
     <link rel="canonical" href="https://easterniowaretainingwall.com/Our%20Team/" />
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -33,6 +32,26 @@
     <meta name="geo.region" content="US-IA" />
     <meta name="geo.placename" content="Eastern Iowa" />
     <link rel="stylesheet" href="../styles.css" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://easterniowaretainingwall.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Our Team",
+          "item": "https://easterniowaretainingwall.com/Our%20Team/"
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
     <header class="site-header">
@@ -173,12 +192,130 @@
   </div>
 </header>
 <script src="../nav.js"></script>
-    <main class="simple-page">
-      <section class="page-hero">
+    <main class="about-page">
+      <section class="service-hero about-hero">
+        <div class="service-hero-bg has-image" aria-hidden="true">
+          <img
+            src="../assets/stairs.jpg"
+            alt="Retaining wall crew finishing a stone stair project"
+          />
+        </div>
+        <div class="service-hero-overlay"></div>
+        <div class="container service-hero-content">
+          <p class="eyebrow">Our Team</p>
+          <h1>The people behind every wall we build</h1>
+          <p>
+            Every project moves through the same hands: planning, design, and
+            a crew that builds it the way it was drawn up.
+          </p>
+          <a class="btn btn--primary btn--hero" href="../Contact Us/index.html"
+            >Get Free Estimate</a
+          >
+        </div>
+      </section>
+
+      <section class="about-intro">
+        <div class="container about-intro-grid">
+          <div class="about-copy">
+            <p class="eyebrow">How we're organized</p>
+            <h2>Planning, design, and build, handled by the same team</h2>
+            <p>
+              A retaining wall project runs through three stages: reviewing
+              the site and grading, choosing the right wall type and
+              material, and building it with proper base preparation and
+              drainage. We keep those three stages under one roof rather than
+              handing a project between separate crews who never talk to
+              each other.
+            </p>
+            <p>
+              That matters most on the details that are easy to skip and
+              expensive to fix later, like footing depth and drainage
+              behind the wall. The people who plan the job are accountable
+              for how it holds up once it's built.
+            </p>
+            <a
+              class="btn btn--primary installer-cta"
+              href="../Contact Us/index.html"
+              >Call For A Free Quote</a
+            >
+          </div>
+
+          <aside class="about-quote-card" aria-label="Free estimate form">
+            <h2>Get a free estimate now</h2>
+            <form class="quote-form" action="../Contact Us/index.html">
+              <label>
+                Name
+                <input type="text" name="name" autocomplete="name" />
+              </label>
+              <label>
+                Email
+                <input type="email" name="email" autocomplete="email" />
+              </label>
+              <label>
+                Phone
+                <input type="tel" name="phone" autocomplete="tel" />
+              </label>
+              <button class="btn btn--primary btn--hero" type="submit">
+                Contact Us
+              </button>
+            </form>
+          </aside>
+        </div>
+      </section>
+
+      <section class="values-section about-values">
+        <div class="values-bg" aria-hidden="true"></div>
         <div class="container">
-          <p class="eyebrow">Team</p>
-          <h1>Our Team</h1>
-          <p>Placeholder team page with the shared navigation applied.</p>
+          <div class="section-heading section-heading--light">
+            <h2>What Our Crew Focuses On</h2>
+            <p>
+              Three things separate a wall that lasts from one that doesn't.
+              Our team is built around getting all three right, every time.
+            </p>
+          </div>
+          <div class="values-grid about-values-grid">
+            <article class="value-card">
+              <div class="value-icon" aria-hidden="true">01</div>
+              <h3>Site Assessment</h3>
+              <p>
+                Before any material is chosen, we look at grading, drainage
+                patterns, and soil conditions so the wall is designed for
+                the site it's actually going on.
+              </p>
+            </article>
+            <article class="value-card">
+              <div class="value-icon" aria-hidden="true">02</div>
+              <h3>Base &amp; Drainage Work</h3>
+              <p>
+                The parts of a retaining wall no one sees, footing depth,
+                backfill, and drain placement, are what determine whether
+                it holds up through freeze-thaw seasons.
+              </p>
+            </article>
+            <article class="value-card">
+              <div class="value-icon" aria-hidden="true">03</div>
+              <h3>Finish Quality</h3>
+              <p>
+                A wall should look as clean as it performs. We hold the
+                same standard for material fit and finish on every job,
+                residential or commercial.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section about-final-cta">
+        <div class="container">
+          <h2>Want to talk with the team about your project?</h2>
+          <p>
+            Tell us what you're working with, and we'll walk through the
+            right wall type, material, and timeline for your property.
+          </p>
+          <a class="btn btn--primary" href="../Contact Us/index.html">
+            <span class="btn-icon btn-icon--light" aria-hidden="true">→</span>
+            Contact Us
+          </a>
         </div>
       </section>
     </main>
