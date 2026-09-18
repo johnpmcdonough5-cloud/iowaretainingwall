@@ -1,4 +1,11 @@
 User-agent: *
 Allow: /
+# Build templates, not pages — they render with 'Image Placeholder' boxes.
+Disallow: /_nav.html
+Disallow: /_nav_compact.html
+Disallow: /_hardscaping_nav.html
+Disallow: /_master_service.html
+Disallow: /_service_template.html
+
 
 Sitemap: https://easterniowaretainingwall.com/sitemap.xml
