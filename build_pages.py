@@ -102,8 +102,17 @@ SERVICE_PAGES = {
 HEADER_PATTERN = re.compile(r"<header class=\"site-header\">.*?</header>", re.DOTALL)
 
 
+NOINDEX_LINE_RE = re.compile(
+    r'\s*<meta name="robots" content="noindex" /><!-- TEMPLATE-ONLY:[^>]*-->\n?'
+)
+
+
 def render_service(page_data: dict) -> str:
     html = TEMPLATE
+    # _service_template.html carries a noindex tag so a direct request to that
+    # file (GitHub Pages serves it like any other .html) isn't indexed. Real
+    # pages built from it should stay indexable, so strip that line here.
+    html = NOINDEX_LINE_RE.sub("\n", html, count=1)
     html = html.replace("{{NAV}}", NAV.strip())
     for key, value in page_data.items():
         html = html.replace("{{" + key + "}}", value)
