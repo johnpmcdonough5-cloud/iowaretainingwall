@@ -258,8 +258,14 @@ def render(post: dict, url: str) -> str:
 
     src = sub_once(r"<title>.*?</title>",
                    f"<title>{esc(post['meta_title'])}</title>", src, "title")
-    src = sub_once(r'(<meta name="description" content=")[^"]*(")',
-                   rf"\g<1>{esc(post['meta_description'])}\g<2>", src, "description")
+    # NOTE: was sub_once() with a \g<1>/\g<2> backreference replacement. sub_once
+    # passes repl through a lambda, which re.subn never expands for backreferences
+    # -- the literal "\g<1>...\g<2>" text would land in the tag on every render.
+    # Confirmed this exact bug had already corrupted all three of onlystumpsiowa's
+    # live posts. Plain re.sub (used everywhere else below) expands backreferences
+    # correctly with a string repl.
+    src = re.sub(r'(<meta name="description" content=")[^"]*(")',
+                 rf"\g<1>{esc(post['meta_description'])}\g<2>", src)
     src = re.sub(r'(<link rel="canonical" href=")[^"]*(")', rf"\g<1>{url}\g<2>", src)
     src = re.sub(r'(<meta property="og:title" content=")[^"]*(")',
                  rf"\g<1>{esc(post['meta_title'])}\g<2>", src)
